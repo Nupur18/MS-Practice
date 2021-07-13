@@ -38,7 +38,7 @@ app.get("*",(req,res)=>{
 })
 
 // Db setup
-const connection = mongoose.connect('mongodb://localhost:27017/teams', {useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex:true});
+const connection = mongoose.connect('mongodb+srv://nupur14:14032001@cluster0.nts1c.mongodb.net/teams?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex:true,useFindAndModify:false});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
@@ -76,8 +76,8 @@ io.on("connection",socket=>{
 })
 
 // Server setup
-const host = process.env.HOST || "127.0.0.1";
-const port = process.env.PORT || 5000;
+const host = "0.0.0.0";
+const port = 8080;
 
 httpServer.listen(port,host,()=>{
     console.log(`Server started on http://${host}:${port}`);
