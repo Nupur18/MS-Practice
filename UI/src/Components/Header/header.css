@@ -1,0 +1,14 @@
+
+.navbar-expand-lg{
+    justify-content: space-between;
+}
+
+#avatar{
+    padding-right: 20px;
+}
+#video-call-btn{
+    background-color: #E0EBED !important;
+    color: #215566 !important;
+    margin-top: 0% !important;
+    margin-left: 15px;
+}
